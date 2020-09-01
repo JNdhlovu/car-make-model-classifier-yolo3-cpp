@@ -4,7 +4,7 @@
 
 ## Introduction
 
-A C++ example for using [Spectrico's car make and model classifier](http://spectrico.com/car-make-model-recognition.html). It consists of object detector for finding the cars, and a classifier to recognize the makes and models of the detected cars. The object detector is an implementation of YOLOv3 (OpenCV DNN backend). It doesn't use GPU and one frame takes 1s to process on Intel Core i5-7600 CPU. YOLOv3 weights were downloaded from [YOLO website](https://pjreddie.com/darknet/yolo/). The classifier is based on Mobilenet v1 (OpenCV DNN backend). It takes 35 milliseconds on Intel Core i5-7600 CPU for single classification.
+A C++ example of using [Spectrico's car make and model classifier](http://spectrico.com/car-make-model-recognition.html). It consists of an object detector for finding the cars, and a classifier to recognize the makes and models of the detected cars. The object detector is an implementation of YOLOv3 (OpenCV DNN backend). It doesn't use GPU and one frame takes 1s to process on Intel Core i5-7600 CPU. YOLOv3 weights were downloaded from [YOLO website](https://pjreddie.com/darknet/yolo/). The classifier is based on MobileNet  (OpenCV DNN backend). It takes 35 milliseconds on Intel Core i5-7600 CPU for a single classification.
 
 ![image](https://github.com/spectrico/car-make-model-classifier-yolo3-cpp/blob/master/car-make-model.png?raw=true)
 
@@ -65,6 +65,6 @@ The YOLOv3 object detector is from: [YOLO: Real-Time Object Detection](https://p
   year={2018}
 }
 ```
-The make and model classifier is based on MobileNet mobile architecture: [MobileNets: Efficient Convolutional Neural Networks for Mobile Vision Applications](https://arxiv.org/abs/1704.04861)
+The make and model classifier is based on MobileNet neural network architecture: [MobileNets: Efficient Convolutional Neural Networks for Mobile Vision Applications](https://arxiv.org/abs/1704.04861)
 
 

@@ -4,7 +4,7 @@
 
 ## Introduction
 
-A C++ example for using [Spectrico's car make and model classifier](http://spectrico.com/car-make-model-recognition.html). It consists of object detector for finding the cars, and a classifier to recognize the makes and models of the detected cars. The object detector is an implementation of YOLOv3 (OpenCV DNN backend). It doesn't use GPU and one frame takes 1s to process on Intel Core i5-7600 CPU. YOLOv3 weights were downloaded from [YOLO website](https://pjreddie.com/darknet/yolo/). The classifier is based on Mobilenet v2 (OpenCV DNN backend). It takes 35 milliseconds on Intel Core i5-7600 CPU for single classification. The light version of the classifier is slightly less accuracy but is 4 times faster. It is optimized for speed and is recommended for edge devices. The demo doesn't include the classifier for car make and model recognition. It is a commercial product and is available for purchase at [http://spectrico.com/car-make-model-recognition.html](http://spectrico.com/car-make-model-recognition.html). A free version of the classifier with lower accuracy is available for download at [http://spectrico.com/spectrico-mmr-mobilenet-64x64-531A7126.zip](http://spectrico.com/spectrico-mmr-mobilenet-64x64-531A7126.zip).
+A C++ example for using [Spectrico's car make and model classifier](http://spectrico.com/car-make-model-recognition.html). It consists of object detector for finding the cars, and a classifier to recognize the makes and models of the detected cars. The object detector is an implementation of YOLOv3 (OpenCV DNN backend). It doesn't use GPU and one frame takes 1s to process on Intel Core i5-7600 CPU. YOLOv3 weights were downloaded from [YOLO website](https://pjreddie.com/darknet/yolo/). The classifier is based on Mobilenet v1 (OpenCV DNN backend). It takes 35 milliseconds on Intel Core i5-7600 CPU for single classification.
 
 ![image](https://github.com/spectrico/car-make-model-classifier-yolo3-cpp/blob/master/car-make-model.png?raw=true)
 
@@ -21,29 +21,29 @@ The output is printed to the console:
 ```
 ------------------------------------------------
 Object box: [440 x 193 from (606, 144)]
-Inference time, ms: 52.5417
+Inference time, ms: 26.2037
 Top 3 probabilities:
-make: Volkswagen        model: Arteon   confidence: 94.5597 %
-make: Volkswagen        model: Passat   confidence: 0.495846 %
-make: Audi      model: A7       confidence: 0.426329 %
+make: Volkswagen        model: Arteon   confidence: 99.6351 %
+make: Volkswagen        model: T-ROC    confidence: 0.0392523 %
+make: Volkswagen        model: Touareg  confidence: 0.0319628 %
 ------------------------------------------------
 
 ------------------------------------------------
 Object box: [318 x 158 from (958, 157)]
-Inference time, ms: 35.1407
+Inference time, ms: 8.0567
 Top 3 probabilities:
-make: Volkswagen        model: Polo     confidence: 89.0573 %
-make: Volkswagen        model: T-ROC    confidence: 5.95808 %
-make: Volkswagen        model: Arteon   confidence: 1.97434 %
+make: Volkswagen        model: Polo     confidence: 45.5947 %
+make: Volkswagen        model: Golf     confidence: 16.0215 %
+make: Volkswagen        model: Jetta    confidence: 6.41334 %
 ------------------------------------------------
 
 ------------------------------------------------
 Object box: [277 x 176 from (362, 137)]
-Inference time, ms: 34.6848
+Inference time, ms: 8.4046
 Top 3 probabilities:
-make: Volkswagen        model: Tiguan   confidence: 95.8008 %
-make: Volkswagen        model: Passat   confidence: 0.732364 %
-make: Volkswagen        model: Polo     confidence: 0.701915 %
+make: Volkswagen        model: Tiguan   confidence: 80.6286 %
+make: Volkswagen        model: Touareg  confidence: 4.5901 %
+make: Volkswagen        model: Golf     confidence: 4.12266 %
 ------------------------------------------------
 ```
 
@@ -65,6 +65,6 @@ The YOLOv3 object detector is from: [YOLO: Real-Time Object Detection](https://p
   year={2018}
 }
 ```
-The make and model classifier is based on MobileNetV2 mobile architecture: [MobileNetV2: Inverted Residuals and Linear Bottlenecks](https://arxiv.org/abs/1801.04381)
+The make and model classifier is based on MobileNet mobile architecture: [MobileNets: Efficient Convolutional Neural Networks for Mobile Vision Applications](https://arxiv.org/abs/1704.04861)
 
 

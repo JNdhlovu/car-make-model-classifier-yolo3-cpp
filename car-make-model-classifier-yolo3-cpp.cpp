@@ -194,10 +194,8 @@ cv::Mat GetSquareImage(const cv::Mat& img, int target_width)
 int main(int argc, char** argv)
 {
 	cv::dnn::Net net_car_make_model_classifier;
-	//const std::string modelFile = "model-weights-spectrico-mmr-mobilenet-224x224-908A6A8C.pb";
-	const std::string modelFile = "model-weights-spectrico-mmr-mobilenet-64x64-531A7126.pb";
-	//const int classifier_input_size = 224;
-	const int classifier_input_size = 64;
+	const std::string modelFile = "model-weights-spectrico-mmr-mobilenet-128x128-344FF72B.pb";
+	const int classifier_input_size = 128;
 	//! [Initialize network]
 	net_car_make_model_classifier = cv::dnn::readNetFromTensorflow(modelFile);
 	if (net_car_make_model_classifier.empty())
